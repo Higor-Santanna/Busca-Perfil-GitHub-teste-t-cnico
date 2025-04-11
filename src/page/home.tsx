@@ -1,6 +1,7 @@
 import { Button } from "../components/button/button"
 import { Search } from "../components/search/search"
 import logo from "../assets/logo.png"
+import carregamento from "../assets/carregamento.gif"
 import { UserProps } from "../types/user"
 import { useState } from "react"
 import { getUser } from "../services/service"
@@ -10,16 +11,22 @@ import { Error } from "../components/error/error"
 const Home = () => {
     const [ user, setUser ] = useState<UserProps | null>(null);
     const [inputValue, setInputValue] = useState("");
-    const [error, setError] = useState(false)
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(false);
     
     const handleSearh = async () => {
+        if(!inputValue || !inputValue.trim()){
+            alert("O campo está vazio por favor digite algo!")
+            return
+        }
+        setLoading(true)
         setError(false);
         setUser(null)
         try {
             const data = await getUser(inputValue)
-            console.log(data)
             setUser(data)
-        } catch (error) {
+            setLoading(false)
+        } catch (error) { 
             setError(true)
         }
     }
@@ -37,8 +44,9 @@ const Home = () => {
                 <Button onClick={handleSearh}/>
             </div>
 
-            {user && <User {...user}/>}
+            {loading && <img src={carregamento}/>}
             {error && <Error />}
+            {user && <User {...user}/>}
         </>
     )
 }

@@ -5,8 +5,7 @@ const getUser = async (userName: string) => {
     const response = await axios.get(`https://api.github.com/users/${userName}`)
     return response.data
   } catch (error) {
-    console.error("A requisição falhou:", error)
-    throw error
+    throw(error)
   }
 }
 
