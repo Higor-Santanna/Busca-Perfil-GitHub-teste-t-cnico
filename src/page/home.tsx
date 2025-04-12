@@ -25,10 +25,10 @@ const Home = () => {
         try {
             const data = await getUser(inputValue)
             setUser(data)
-            setLoading(false)
-        } catch (error) { 
+        } catch { 
             setError(true)
         }
+        setLoading(false)
     }
 
     return(

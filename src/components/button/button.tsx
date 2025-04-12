@@ -5,7 +5,7 @@ type ButtonProps = {
 const Button = ({ onClick }: ButtonProps) => {
     return(
         <>
-            <button onClick={onClick}>Burcar</button>
+            <button onClick={onClick}  aria-label="Buscar usuário">Burcar</button>
         </>
     )
 };
