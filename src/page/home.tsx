@@ -7,6 +7,7 @@ import { useState } from "react"
 import { getUser } from "../services/service"
 import { User } from "../components/user/user"
 import { Error } from "../components/error/error"
+import "./home.css"
 
 const Home = () => {
     const [ user, setUser ] = useState<UserProps | null>(null);
@@ -32,7 +33,7 @@ const Home = () => {
     }
 
     return(
-        <>
+        <div className="DivHomeFather">
             <header>
                 <img src={logo} alt="Logo do Github" />
                 <h2>Perfil</h2>
@@ -47,7 +48,7 @@ const Home = () => {
             {loading && <img src={carregamento}/>}
             {error && <Error />}
             {user && <User {...user}/>}
-        </>
+        </div>
     )
 }
 
