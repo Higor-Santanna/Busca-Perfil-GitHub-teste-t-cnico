@@ -3,8 +3,8 @@ import userEvent from "@testing-library/user-event"
 import { describe, it, expect, vi } from "vitest"
 import { Search } from "./search"
 
-describe("Search component", () => {
-  it("chama onChange com o valor digitado", async () => {
+describe("Search", () => {
+  it("should test the search", async () => {
     const mockOnChange = vi.fn()
     render(<Search onChange={mockOnChange} />)
 
