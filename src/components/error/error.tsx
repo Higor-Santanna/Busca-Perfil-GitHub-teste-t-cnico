@@ -1,10 +1,12 @@
+import "./error.css"
+
 const Error = () => {
     return(
         <>
-            <p>
-                Nenhum perfil foi encontrado com esse nome de usuário.
-                Tente novamente
-            </p>
+            <div className="Error">
+                <p>Nenhum perfil foi encontrado com esse nome de usuário.</p>
+                <p>Tente Novamente</p>
+            </div>
         </>
     )
 };

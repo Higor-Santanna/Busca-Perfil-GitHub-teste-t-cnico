@@ -11,26 +11,41 @@
     background-color: #000;
     color: #fff;
   }
-  
-  .DivHomeFather header {
+
+  .header{
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    gap: 10px;
+    background-color: #000;
+
+    img{
+      width: 58px;
+      height: 58px;
+      background-color: #000;
+    }
   }
-  
-  .DivHomeFather h2 {
-    font-size: 1.5rem;
-  }
-  
-  .DivHomeFather img {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .DivHomeFather > div {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  
+
+.headerPerfil{
+  font-size: 60px;
+  font-weight: 600;
+  background-color: #000;
+}
+
+.headerGithub{
+  font-family: "Mona Sans", sans-serif;
+  font-size: 60px;
+  font-weight: 800;
+  background-color: #000;
+}
+
+.DivSearch{
+  width: 503px;
+  height: 62px;
+  background-color: #DDDDDD;
+  border-radius: 10px;
+  margin: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

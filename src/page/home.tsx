@@ -34,13 +34,13 @@ const Home = () => {
 
     return(
         <div className="DivHomeFather">
-            <header>
+            <header className="header">
                 <img src={logo} alt="Logo do Github" />
-                <h2>Perfil</h2>
-                <h2>GitHub</h2>
+                <h2 className="headerPerfil">Perfil</h2>
+                <h2 className="headerGithub">GitHub</h2>
             </header>
 
-            <div>
+            <div className="DivSearch">
                 <Search onChange={setInputValue}/>
                 <Button onClick={handleSearh}/>
             </div>

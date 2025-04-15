@@ -1,0 +1,25 @@
+.Button{
+    width: 62px;
+    height: 62px;
+    border-radius: 10px;
+    background-color: #005CFF;
+    cursor: pointer;
+    border: 1px #DDDDDD solid;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    i{
+        background-color: #005CFF;
+        font-size: 30px;
+        color: #fff;
+        transition: transform 0.2s ease;
+    }
+}
+
+.Button:hover {
+    background-color: #dd7d00;
+    box-shadow: 0 8px 15px rgba(206, 151, 0, 0.548);
+
+    i{
+        background-color: #dd7d00;
+    }
+}

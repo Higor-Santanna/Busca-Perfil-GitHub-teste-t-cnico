@@ -1,3 +1,5 @@
+import "./search.css"
+
 type SearchProps = {
     onChange: (value: string) => void
   }
@@ -8,7 +10,7 @@ const Search = ( { onChange }: SearchProps ) => {
     } 
     return (
         <>
-            <input type="text" placeholder="Digite um usuário do Git" onChange={handleInputChange} />
+            <input type="text" className="Search"  placeholder="Digite um usuário do Git" onChange={handleInputChange} />
         </> 
     )
 };
