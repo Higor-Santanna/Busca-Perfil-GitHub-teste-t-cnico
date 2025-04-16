@@ -6,3 +6,17 @@
     font-size: 20px;
     font-weight: 600;
 }
+
+@media(max-width: 1024px){
+    .Search{
+        width: 429px;
+        height: 40px;
+    }
+}
+
+@media(max-width: 500px){
+    .Search{
+        width: 250px;
+        font-size: 15px;
+    }
+}

@@ -23,3 +23,14 @@
         background-color: #dd7d00;
     }
 }
+
+@media(max-width: 1024px){
+    .Button{
+        width: 42px;
+        height: 42px;
+
+        i{
+            font-size: 20px;
+        }
+    }
+}

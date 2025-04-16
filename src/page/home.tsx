@@ -10,13 +10,13 @@ import { Error } from "../components/error/error"
 import "./home.css"
 
 const Home = () => {
-    const [ user, setUser ] = useState<UserProps | null>(null);
+    const [user, setUser] = useState<UserProps | null>(null);
     const [inputValue, setInputValue] = useState("");
     const [loading, setLoading] = useState(false)
     const [error, setError] = useState(false);
-    
+
     const handleSearh = async () => {
-        if(!inputValue || !inputValue.trim()){
+        if (!inputValue || !inputValue.trim()) {
             alert("O campo está vazio por favor digite algo!")
             return
         }
@@ -26,13 +26,13 @@ const Home = () => {
         try {
             const data = await getUser(inputValue)
             setUser(data)
-        } catch { 
+        } catch {
             setError(true)
         }
         setLoading(false)
     }
 
-    return(
+    return (
         <div className="DivHomeFather">
             <header className="header">
                 <img src={logo} alt="Logo do Github" />
@@ -41,13 +41,17 @@ const Home = () => {
             </header>
 
             <div className="DivSearch">
-                <Search onChange={setInputValue}/>
-                <Button onClick={handleSearh}/>
+                <Search onChange={setInputValue} onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                        handleSearh();
+                    }
+                }}/>
+                <Button onClick={handleSearh} />
             </div>
 
-            {loading && <img src={carregamento}/>}
+            {loading && <img src={carregamento} className="Loading" />}
             {error && <Error />}
-            {user && <User {...user}/>}
+            {user && <User {...user} />}
         </div>
     )
 }
