@@ -14,3 +14,11 @@
     background-color: #D9D9D9;
    }
 }
+
+@media(max-width: 500px){
+   .Error{
+      width: 310px;
+      height: 120px;
+      text-align: center;
+   }
+}

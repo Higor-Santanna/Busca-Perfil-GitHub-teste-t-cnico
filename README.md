@@ -1,54 +1,63 @@
-# React + TypeScript + Vite
+[JAVASCRIPT__BADGE]: https://img.shields.io/badge/Javascript-000?style=for-the-badge&logo=javascript
+[NODE__BADGE]: https://cdn4.iconfinder.com/data/icons/logos-3/454/nodejs-new-pantone-white-512.png
+[PROJECT__BADGE]: https://img.shields.io/badge/📱Visit_this_project-000?style=for-the-badge&logo=project
+[PROJECT__URL]: https://github.com/Fernanda-Kipper/Readme-Templates
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h1 align="center" style="font-weight: bold;"> Busca de Perfil no GitHub 💻</h1>
 
-Currently, two official plugins are available:
+<p align="center">
+ <a href="#about">Sobre</a> • 
+ <a href="#images">Funcionamento</a> • 
+  <a href="#install">Instalação</a>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h2 id="started">📌 Sobre</h2>
 
-## Expanding the ESLint configuration
+O projeto foi desenvolvido com a linguagem TypeScript com o auxílio da biblioteca ReactJs + Vite, o estilo foi feito e CSS puro. A aplicação consiste em buscar o nome, foto e descrição de algum usuário do github através do seu nickname. Isso é feito pelo campo de busca no centro da página. O projeto também conta com responsividade, o que torna muito mais agradável para usuários que utilizaram em dispositivos móveis.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<h2 id="started">📌 Funcionalidades</h2>
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Busca por usuário através do nickname;
+- Caso o usuário não existe emite uma aviso;
+- Verificação no campo input, caso queirá enviar uma pesquisa com o campo vazio ele retornar uma mensagem dizendo que o campo está vazio.
+
+<h2 id="images">📍 Funcionamento</h2>
+
+<p align="center">
+    <img src="./assets/github-1.png" alt="github1" width="600px">
+</p>
+
+<p align="center">
+    <img src="./assets/github-2.png" alt="github2" width="600px">
+</p>
+
+<p align="center">
+    <img src="./assets/github-3.png" alt="github3" width="600px">
+</p>
+
+<p align="center">
+    <img src="./assets/github-4.png" alt="github3" width="600px">
+</p>
+
+
+<h2 id="started">🚀 Instalação</h2>
+
+<h3>Clonando</h3>
+
+```bash
+git clone https://github.com/Higor-Santanna/Busca-Perfil-GitHub-teste-t-cnico.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+<h3>Frontend</h3>
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Entre na pasta, abra o terminal e digite o comando para instalar todas as dependências:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+npm install
 ```
+Para rodar a aplicação frontend, no seu terminal digite o seguinte comando e clique o link que aparecer:
+
+```bash
+npm run dev
+```
+OBS: Pode usar o yarn, pnpm ou o comando que você achar mais confortável.
