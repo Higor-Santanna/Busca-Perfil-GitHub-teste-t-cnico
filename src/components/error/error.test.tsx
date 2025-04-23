@@ -1,14 +1,16 @@
-import { describe, it, expect } from "vitest";
-import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom"
+import { describe, it, expect } from "vitest";
 import { Error } from "./error";
 
-describe('Error', async () => {
-    it("should render the error", async () => {
+describe('Error', () => {
+    it("should render the error", () => {
         render(<Error />)
 
-        const error = screen.getByText("Nenhum perfil foi encontrado com esse nome de usuário. Tente novamente")
+        const errorFirstText = screen.getByText("Nenhum perfil foi encontrado com esse nome de usuário.")
+        const errorSecondText = screen.getByText("Tente Novamente")
 
-        expect(error).toBeInTheDocument();
+        expect(errorFirstText).toBeInTheDocument()
+        expect(errorSecondText).toBeInTheDocument()
     })
 })
